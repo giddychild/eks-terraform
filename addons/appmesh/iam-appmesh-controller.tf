@@ -18,7 +18,7 @@ data "aws_iam_policy_document" "appmesh_controller" {
 
 resource "aws_iam_role" "appmesh_controller" {
   assume_role_policy = data.aws_iam_policy_document.appmesh_controller.json
-  name               = "${local.env}-${local.eks_name}-eks-appmesh-controller"
+  name               = "eks-appmesh-controller-role"
 }
 
 resource "aws_iam_role_policy_attachment" "aws_cloud_map_full_access_controller" {

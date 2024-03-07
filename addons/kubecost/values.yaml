@@ -88,7 +88,7 @@ ingress:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:914880161513:certificate/8bdc0c0a-6fb4-48de-92c3-88da07ae1724
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:155125294186:certificate/15786fb1-c585-4080-a576-0ac973f1c31d
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: '443'
     alb.ingress.kubernetes.io/group.name: kubecost

@@ -2,7 +2,7 @@ module "eks" {
   source = "github.com/sahibgasimov/eks-terraform-stable//terraform?ref=main"
   #### EKS Cluster ####
   cluster_name    = "dev"
-  cluster_version = "1.27"
+  cluster_version = "1.29"
   environment     = "dev"
   ##### ALB Ingress Controller and External DNS #####
   external_dns          = "6.20.3"
@@ -12,13 +12,13 @@ module "eks" {
   ##### Nodes Autoscaling desired instance size #####
   instance_types  = "t3.small"
   desired_size    = 2
-  max_size        = 5
+  max_size        = 3
   min_size        = 2
   max_unavailable = 1
   ##### Route53 Domain #####
   region         = "us-east-1"
-  domain         = "2778219839.realdsonlabs.net"
-  hosted_zone_id = "Z032090321234OEK4"
+  domain         = "giddychild.com"
+  hosted_zone_id = "Z06639231JA5LVJ5MKIMA"
   ##### Networking #####
   vpc_cidr         = "10.0.0.0/16"
   private_subnet_1 = "10.0.0.0/19"

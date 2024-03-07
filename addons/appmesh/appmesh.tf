@@ -1,18 +1,18 @@
 # Deploy to existing EKS cluster
-# provider "helm" {
-#   kubernetes {
-#     config_path = "~/.kube/config"
-#   }
-# }
+provider "helm" {
+  kubernetes {
+    config_path = "~/.kube/config"
+  }
+}
 
 data "aws_eks_cluster" "eks" {
-  name = "${local.env}-${local.eks_name}"
+  name = aws_eks_cluster.dev.name
 
   depends_on = [aws_eks_cluster.eks]
 }
 
 data "aws_eks_cluster_auth" "eks" {
-  name = "${local.env}-${local.eks_name}"
+  name = aws_eks_cluster.dev.name
 
   depends_on = [aws_eks_cluster.eks]
 }

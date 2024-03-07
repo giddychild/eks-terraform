@@ -1,5 +1,6 @@
 resource "aws_security_group" "dev" {
   name = var.cluster_name
+  vpc_id = aws_vpc.main.id
   egress = [
     {
       cidr_blocks      = ["0.0.0.0/0", ]
